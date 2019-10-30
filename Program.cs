@@ -7,7 +7,7 @@ namespace Algoritmos
     {
         static void Main(string[] args)
         {
-             Console.WriteLine("teste");
+             Console.WriteLine("Bubble sort - 1\n Quick sort - 2");
             var x = Console.ReadLine();
             switch (x)
             {
@@ -57,6 +57,7 @@ namespace Algoritmos
                             }
                         }
                     }
+                    Console.WriteLine("\n");
                     foreach (var item in numeros)
                     {
                         Console.WriteLine(item);
@@ -119,69 +120,6 @@ namespace Algoritmos
                     }
                     QuickSort(nums, 0, nums.Count-1);
                     foreach (var item in nums)
-                    {
-                        Console.WriteLine(item);
-
-                    }
-                    Console.ReadKey();
-
-                    break;
-
-                case "3":
-                    Console.WriteLine("Quick sort");
-                    List<int> num = new List<int>();
-
-                    while (true)
-                    {
-                        Console.WriteLine("s(1)/n(2)");
-
-                        var y = Convert.ToInt32(Console.ReadLine());
-                        if (y == 2)
-                        {
-                            break;
-                        }
-                        Console.WriteLine("dig um numero");
-                        num.Add(Convert.ToInt32(Console.ReadLine()));
-                    }
-                    List<int> QuickSort2(List<int> X, int inicio, int final)
-                    {
-
-                        var i = inicio;
-                        var j = final - 1;
-                        var pivo = X[j];
-                        while (true)
-                        {
-                            while (X[i] < pivo)
-                            {
-                                i++;
-                            }
-                            while (X[j] > pivo)
-                            {
-                                j--;
-                            }
-                            while (i <= j)
-                            {
-                                var aux = X[i];
-                                X[i] = X[j];
-                                X[j] = aux;
-                                i++;
-                                j--;
-                            }
-                            break;
-
-                        }
-                        if (inicio < j)
-                        {
-                            QuickSort(X, inicio, j);
-                        }
-                        if (i < final)
-                        {
-                            QuickSort(X, i, final);
-                        }
-                        return X;
-                    }
-                    var result2 = QuickSort2(num, 0, num.Count);
-                    foreach (var item in result2)
                     {
                         Console.WriteLine(item);
 
